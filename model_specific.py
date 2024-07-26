@@ -23,7 +23,7 @@ class ConcreteConverter(Converter):
 class ConcreteInferencer(Inferencer):
     def process_file(self, filepath: str, output_filename: str):
         """ implement for specific model """
-        command = f"python -m amp.inference.scripts.predict_if_amp --model_path models/amp_classifier/ \
+        command = f"python -m amp.inference.scripts.predict_if_amp --model_path models/mic_classifier/ \
 --sequence_path {filepath} --format fasta --output_csv {output_filename}"
         print(command)
         os.system(command)
